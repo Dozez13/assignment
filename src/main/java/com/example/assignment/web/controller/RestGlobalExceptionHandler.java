@@ -17,6 +17,8 @@ import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class RestGlobalExceptionHandler {
+    private static final String VALIDATION_TITLE = "Validation failed";
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<?> onMethodArgumentNotValidException(MethodArgumentNotValidException e) {
         List<FieldDetail> fieldDetailList = e.getFieldErrors()
@@ -24,24 +26,22 @@ public class RestGlobalExceptionHandler {
                 .map(fieldError -> new FieldDetail(fieldError.getField(), fieldError.getDefaultMessage()))
                 .sorted(Comparator.comparing(FieldDetail::getFieldName).thenComparing(FieldDetail::getMessage))
                 .collect(Collectors.toList());
-        String title = "Validation failed";
-        ErrorResponse<List<FieldDetail>> errorResponse = new ErrorResponse<>(HttpStatus.BAD_REQUEST.value(), title, fieldDetailList);
+        ErrorResponse<List<FieldDetail>> errorResponse = new ErrorResponse<>(HttpStatus.BAD_REQUEST.value(), VALIDATION_TITLE, fieldDetailList);
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
 
     }
 
-//    @ExceptionHandler(ConstraintViolationException.class)
-//    public ResponseEntity<?> onConstraintViolationException(ConstraintViolationException e) {
-//        List<FieldDetail> fieldDetailList = e.getConstraintViolations()
-//                .stream()
-//                .map(fieldError -> new FieldDetail(fieldError.getPropertyPath().toString(), fieldError.getMessage()))
-//                .sorted(Comparator.comparing(FieldDetail::getFieldName).thenComparing(FieldDetail::getMessage))
-//                .collect(Collectors.toList());
-//        String title = "Validation failed";
-//        ErrorResponse<List<FieldDetail>> errorResponse = new ErrorResponse<>(HttpStatus.BAD_REQUEST.value(), title, fieldDetailList);
-//        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
-//
-//    }
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ResponseEntity<?> onConstraintViolationException(ConstraintViolationException e) {
+        List<FieldDetail> fieldDetailList = e.getConstraintViolations()
+                .stream()
+                .map(fieldError -> new FieldDetail(fieldError.getPropertyPath().toString(), fieldError.getMessage()))
+                .sorted(Comparator.comparing(FieldDetail::getFieldName).thenComparing(FieldDetail::getMessage))
+                .collect(Collectors.toList());
+        ErrorResponse<List<FieldDetail>> errorResponse = new ErrorResponse<>(HttpStatus.BAD_REQUEST.value(), VALIDATION_TITLE, fieldDetailList);
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+
+    }
 
     @ExceptionHandler(BindException.class)
     public ResponseEntity<?> onBindException(BindException e) {
@@ -50,8 +50,7 @@ public class RestGlobalExceptionHandler {
                 .map(fieldError -> new FieldDetail(fieldError.getField(), fieldError.getDefaultMessage()))
                 .sorted(Comparator.comparing(FieldDetail::getFieldName).thenComparing(FieldDetail::getMessage))
                 .collect(Collectors.toList());
-        String title = "Validation failed";
-        ErrorResponse<List<FieldDetail>> errorResponse = new ErrorResponse<>(HttpStatus.BAD_REQUEST.value(), title, fieldDetailList);
+        ErrorResponse<List<FieldDetail>> errorResponse = new ErrorResponse<>(HttpStatus.BAD_REQUEST.value(), VALIDATION_TITLE, fieldDetailList);
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 
@@ -62,11 +61,11 @@ public class RestGlobalExceptionHandler {
 
     }
 
-//    @ExceptionHandler(RuntimeException.class)
-//    public ResponseEntity<?> onRuntimeException(RuntimeException e) {
-//        ErrorResponse<?> errorResponse = new ErrorResponse<>(HttpStatus.BAD_REQUEST.value(), e.getMessage(), null);
-//        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
-//
-//    }
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<?> onRuntimeException(RuntimeException e) {
+        ErrorResponse<?> errorResponse = new ErrorResponse<>(HttpStatus.BAD_REQUEST.value(), e.getMessage(), null);
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+
+    }
 
 }
