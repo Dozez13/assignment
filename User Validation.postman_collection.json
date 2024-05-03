@@ -1,0 +1,730 @@
+{
+	"info": {
+		"_postman_id": "f51a9978-9aa9-46f3-8188-8f316bdeb8b7",
+		"name": "User Validation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17204124"
+	},
+	"item": [
+		{
+			"name": "Email",
+			"item": [
+				{
+					"name": "Not Null",
+					"item": [
+						{
+							"name": "Email Not Null(Create)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": null,\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Email Not Null(Update)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": null,\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Email Not Null(Patch)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": null,\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Email Pattern",
+					"item": [
+						{
+							"name": "Email Pattern(Create)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavelgmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Email Pattern(Update)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavelgmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Email Pattern(Patch)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavelgmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "First Name",
+			"item": [
+				{
+					"name": "Not Null",
+					"item": [
+						{
+							"name": "First Name Not Null(Create)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": null,\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "First Name Not Null(Update)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": null,\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "First Name Not Null(Patch)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": null,\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Last Name",
+			"item": [
+				{
+					"name": "Not Null",
+					"item": [
+						{
+							"name": "Last Name Not Null(Create)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": null,\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Last Name Not Null(Update)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": null,\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Last Name Not Null(Patch)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": null,\r\n    \"birthDate\": \"2003-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Birthdate",
+			"item": [
+				{
+					"name": "Not Null",
+					"item": [
+						{
+							"name": "Birthdate Not Null(Create)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": null,\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Birthdate Not Null(Update)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": null,\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Birthdate Not Null(Patch)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": null,\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Adult",
+					"item": [
+						{
+							"name": "Birthdate Not Adult(Create)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2024-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Birthdate Not Adult(Update)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2024-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Birthdate Not Adult(Patch)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2024-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Past And Adult",
+					"item": [
+						{
+							"name": "Birthdate Not Past And Adult(Create)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2025-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Birthdate Not Past And Adult(Update)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2025-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Birthdate Not Past And Adult(Patch)",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3manuilenkopavel@gmail.com\",\r\n    \"firstName\": \"3firstName\",\r\n    \"lastName\": \"3lastName\",\r\n    \"birthDate\": \"2025-04-27\",\r\n    \"address\": \"3testAddress\",\r\n    \"phoneNumber\": \"3phoneNumber\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/secure/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"secure",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

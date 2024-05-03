@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.xsd">
+
+    <changeSet id="insert_user_table" author="Pavlo Manuilenko" context="dev">
+        <insert tableName="user">
+            <column name="email" value="1pavmarnui1@gmail.com"/>
+            <column name="first_name" value="1Adam1"/>
+            <column name="last_name" value="1Smith1"/>
+            <column name="birth_date" value="2000-04-25"/>
+            <column name="address" value="1testAddress1"/>
+            <column name="phone_number" value="1055555-55858-1"/>
+        </insert>
+        <insert tableName="user">
+            <column name="email" value="2pavmarnui1@gmail.com"/>
+            <column name="first_name" value="2Adam1"/>
+            <column name="last_name" value="2Smith1"/>
+            <column name="birth_date" value="2000-05-25"/>
+            <column name="address" value="2testAddress1"/>
+            <column name="phone_number" value="2055555-55858-1"/>
+        </insert>
+        <insert tableName="user">
+            <column name="email" value="3pavmarnui1@gmail.com"/>
+            <column name="first_name" value="3Adam1"/>
+            <column name="last_name" value="3Smith1"/>
+            <column name="birth_date" value="2000-06-25"/>
+            <column name="address" value="3testAddress1"/>
+            <column name="phone_number" value="6055555-55858-1"/>
+        </insert>
+        <insert tableName="user">
+            <column name="email" value="4pavmarnui1@gmail.com"/>
+            <column name="first_name" value="4Adam1"/>
+            <column name="last_name" value="4Smith1"/>
+            <column name="birth_date" value="2000-07-25"/>
+            <column name="address" value="4testAddress1"/>
+            <column name="phone_number" value="4055555-55858-1"/>
+        </insert>
+        <insert tableName="user">
+            <column name="email" value="5pavmarnui1@gmail.com"/>
+            <column name="first_name" value="5Adam1"/>
+            <column name="last_name" value="5Smith1"/>
+            <column name="birth_date" value="2000-08-25"/>
+            <column name="address" value="5testAddress1"/>
+            <column name="phone_number" value="5055555-55858-1"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

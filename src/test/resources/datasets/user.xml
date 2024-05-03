@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+    <User
+            id="1"
+            email="pavmarnui1@gmail.com"
+            first_name="Adam1"
+            last_name="Smith1"
+            birth_date="2000-03-25"
+            address="testAddress1"
+            phone_number="055555-55858-1"
+    />
+</dataset>
